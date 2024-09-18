@@ -7,19 +7,16 @@ import Image from "next/image";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+// import { Label } from "@/components/ui/label"
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select"
 
 export function Details() {
     const [selectedLocation, setSelectedLocation] = useState('');
@@ -34,7 +31,7 @@ export function Details() {
       };
 
       // Handle the location selection from the dropdown
-  const handleLocationChange = (e) => {
+  const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedLocation(e.target.value);
     setShowVideo(false); // Reset the video display
   };
